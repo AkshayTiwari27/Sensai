@@ -25,25 +25,69 @@ SensAi is a comprehensive, full-stack career coaching platform designed to provi
   * **Adaptive Interview Preparation**: Practice with AI-generated mock interviews with questions tailored to your industry and skills. Get detailed feedback and track your performance over time with analytics.
   * **Industry-Specific Insights**: Get up-to-date information on salary ranges, demand levels, and key trends in your industry. Discover the top skills required for your industry and get recommendations on what to learn next.
 
-## System Architecture: A Scalable Client-Server Model
 
-### SensAi Client-Server Architecture
+-----
 
-The SensAi platform is built on a modern, client-server architecture designed for scalability and performance. The front end is a Next.js application that communicates with a serverless backend, which in turn interacts with a PostgreSQL database and various third-party services.
+## 🏗️ System Architecture
+
+The SensAi platform is built on a modern, scalable, and serverless architecture designed for performance and maintainability. The system is logically divided into several layers, each with distinct responsibilities, from the user interface to the data and external services.
+
+```
+SensAi/
+├── 📁 app/                     # Next.js App Router (Core Application)
+│   ├── 📁 (auth)/              # Authentication-related pages (Clerk)
+│   ├── 📁 (main)/              # Main application features (Protected Routes)
+│   └── 📁 api/                 # API routes (Inngest webhook)
+├── 📁 actions/                 # Server-side logic (Next.js Server Actions)
+├── 📁 components/              # Reusable React components (Shadcn UI)
+├── 📁 lib/                      # Helper functions and client initializations
+│   ├── 📁 inngest/             # Inngest client and background job definitions
+│   └── 📄 prisma.js            # Prisma client for database access
+├── 📁 prisma/                   # Database schema and migrations
+└── 📄 middleware.js            # Authentication and route protection
+
+```
+
+
+<p align="center">
+  <img src="images/Flow-diagram.png"
+       alt="SensAi System Architecture"
+       width="850" />
+  <br/>
+  <em>A high-level overview of the SensAi platform, illustrating the interaction between the Next.js frontend, serverless backend, and external services like Google Gemini and Inngest.</em>
+</p>
 
 ### Architectural Breakdown
 
-#### **Client (The Frontend)**
+#### 1\. **Client-Side (Frontend)**
 
-The client-side is a responsive and interactive user interface built with **React** and **Next.js**. It features a rich set of UI components from **Shadcn UI** and is styled with **Tailwind CSS**. The client is responsible for rendering the user interface and handling user interactions.
+The frontend is a dynamic and responsive user interface built with **Next.js** and **React**, following the modern **App Router** paradigm.
 
-#### **Server (The Backend)**
+  * **UI Components**: The user interface is composed of reusable components from **Shadcn UI**, styled with **Tailwind CSS**. This creates a consistent and visually appealing user experience.
+  * **Routing**: The application uses a file-based routing system, with distinct layouts for authentication (`app/(auth)`) and the main application (`app/(main)`), ensuring a clean separation of public and protected areas.
+  * **State Management**: Client-side state is managed with a combination of React's built-in hooks and custom hooks, such as `useFetch` for handling data fetching and loading states.
 
-The backend is built using **Next.js API Routes** and **Server Actions**, providing a robust and scalable serverless architecture. It handles business logic, data processing, and communication with the database and external services.
+#### 2\. **Server-Side (Backend)**
 
-#### **Communication Protocol**
+The backend is built using a serverless approach with **Next.js Server Actions** and API routes, enabling a seamless integration between the client and server.
 
-The client and server communicate via HTTP requests. The front end sends requests to the backend to fetch data, generate content, and perform other actions. The backend processes these requests, interacts with the database and external services, and returns the results to the client.
+  * **Server Actions**: The core of the backend logic is implemented using Server Actions, which allow for direct, secure communication between the client and server without the need for traditional API endpoints. This is used for all major operations, including user updates, resume and cover letter generation, and interview assessment.
+  * **Authentication & Authorization**: User authentication is handled by **Clerk**, with a robust middleware system to protect routes and manage user sessions. This ensures that only authenticated users can access the main application features.
+
+#### 3\. **Data Layer**
+
+The data layer is responsible for persisting and managing all application data, using a combination of a serverless database and a modern ORM.
+
+  * **Database**: The application uses **Neon DB**, a serverless PostgreSQL database, which provides a scalable and cost-effective solution for data storage.
+  * **ORM**: **Prisma** is used as the Object-Relational Mapper (ORM), providing a type-safe and intuitive way to interact with the database. The database schema and migrations are managed through Prisma, ensuring a consistent and version-controlled database structure.
+
+#### 4\. **External and Background Services**
+
+The SensAi platform integrates with several third-party services to provide its intelligent features and handle asynchronous tasks.
+
+  * **Google Gemini API**: The core AI features are powered by the Google Gemini API, which is used for generating content for resumes, cover letters, and interview questions.
+  * **Inngest**: Background jobs, such as the weekly generation of industry insights, are managed by **Inngest**. This allows for long-running tasks to be executed without blocking the main application thread, ensuring a smooth user experience.
+
 
 ## Feature-Driven DSA Implementation: A Technical Analysis
 
