@@ -15,18 +15,20 @@
 
 SensAi is a comprehensive, full-stack career coaching platform designed to provide users with personalized, data-driven career guidance. The application leverages the Google Gemini API to offer a suite of intelligent tools, including a resume builder with AI-powered suggestions, a cover letter generator, and an adaptive interview preparation system. The platform is built with a modern tech stack, featuring Next.js for the front end, a serverless backend with a Neon DB PostgreSQL database, and Prisma ORM for efficient data management.
 
-## 🧠 Project Evolution
+---
 
-### Key improvements
+### 🧠 AI-Powered Features & Technical Implementation
 
-  * **AI-Powered Career Guidance**: Get personalized career recommendations and insights powered by Google's Gemini AI.
-  * **Intelligent Resume Builder**: Create and manage your resume using a user-friendly form-based editor or a markdown editor. Get AI-powered suggestions to improve your resume's content and download your resume as a PDF.
-  * **AI Cover Letter Generator**: Generate tailored cover letters for your job applications by providing the job description. View and manage all your generated cover letters.
-  * **Adaptive Interview Preparation**: Practice with AI-generated mock interviews with questions tailored to your industry and skills. Get detailed feedback and track your performance over time with analytics.
-  * **Industry-Specific Insights**: Get up-to-date information on salary ranges, demand levels, and key trends in your industry. Discover the top skills required for your industry and get recommendations on what to learn next.
+| 🧩 Feature                      | ⚙️ Technical Implementation                                                                                                                                    |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AI Career Guidance**          | Uses **Google Gemini API** to provide personalized career recommendations based on user goals, skillset, and industry insights.                                |
+| **Resume Builder**              | Form-based and markdown editors for flexible resume creation. Resumes are stored in structured format and converted to **PDF**. Data is validated server-side. |
+| **Cover Letter Generator**      | Accepts job descriptions and uses **Gemini API** to generate tailored letters. Letters are saved with metadata for version control and user management.        |
+| **Interview Preparation**       | Dynamically generates mock interview questions using Gemini AI. Tracks performance metrics, visualized with **Recharts** (interactive analytics).              |
+| **Industry Insights Dashboard** | Weekly background jobs via **Inngest** fetch real-time salary data, skill demand, and trends. Ensures 100% data freshness across 15+ domains.                  |
 
 
------
+----
 
 ## 🏗️ System Architecture
 
@@ -87,15 +89,6 @@ The SensAi platform integrates with several third-party services to provide its 
 
   * **Google Gemini API**: The core AI features are powered by the Google Gemini API, which is used for generating content for resumes, cover letters, and interview questions.
   * **Inngest**: Background jobs, such as the weekly generation of industry insights, are managed by **Inngest**. This allows for long-running tasks to be executed without blocking the main application thread, ensuring a smooth user experience.
-
-
-## Feature-Driven DSA Implementation: A Technical Analysis
-
-The SensAi platform leverages a variety of data structures and algorithms to deliver its intelligent features:
-
-  * **Resume Builder**: The resume builder uses a form-based editor and a Markdown editor to create and manage resumes. The data is stored in a structured format in the database and can be easily converted to a PDF for download.
-  * **Cover Letter Generator**: The cover letter generator uses the Gemini API to generate tailored cover letters based on user-provided job descriptions. The generated letters are stored in the database and can be viewed and managed by the user.
-  * **Interview Preparation**: The interview preparation system uses the Gemini API to generate mock interview questions tailored to the user's industry and skills. The user's performance is tracked over time with detailed analytics, which are displayed in interactive charts.
 
 ## How to Build and Run
 
