@@ -54,10 +54,11 @@ SensAi/
 <p align="center">
   <img src="images/Flow-diagram.png"
        alt="SensAi System Architecture"
-       width="850" />
+       width="1000" />
   <br/>
   <em>A high-level overview of the SensAi platform, illustrating the interaction between the Next.js frontend, serverless backend, and external services like Google Gemini and Inngest.</em>
 </p>
+
 
 ### Architectural Breakdown
 
