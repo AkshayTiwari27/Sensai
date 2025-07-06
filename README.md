@@ -16,6 +16,10 @@
 SensAi – Full-Stack AI Career Assistant is a modern, AI-powered platform that provides users with personalized, data-driven career guidance, including resume building, cover letter creation, and interview preparation. The application leverages the Google Gemini API to offer a suite of intelligent tools, including a resume builder with AI-powered suggestions, a cover letter generator, and an adaptive interview preparation system. The platform is built with a modern tech stack, featuring Next.js for the front end, a serverless backend with a Neon DB PostgreSQL database, and Prisma ORM for efficient data management.
 
 ---
+### 📌 Live Demo
+
+[🚀 Click here to view the deployed project](https://sensai-brown.vercel.app/)
+
 
 ### 🧠 AI-Powered Features & Technical Implementation
 
@@ -98,9 +102,9 @@ The SensAi platform integrates with several third-party services to provide its 
   * Node.js (v18.18.0 or later)
   * npm
 
-### Compilation (Makefile Recommended)
+🚀 Getting Started
 
-This project does not use a Makefile for compilation. Instead, you can use the following npm scripts to build and run the application:
+This project does not use a Makefile. You can build and run the application using the following npm scripts:
 
   * `npm run dev`: Starts the development server.
   * `npm run build`: Builds the application for production.
@@ -148,9 +152,6 @@ This project does not use a Makefile for compilation. Instead, you can use the f
 
 To use the SensAi platform, simply visit the live demo link and create an account. Once you're logged in, you can start using the various tools to help you advance in your career.
 
-### 📌 Live Demo
-
-[🚀 Click here to view the deployed project](https://sensai-brown.vercel.app/)
 
 ## Future Enhancements
 
