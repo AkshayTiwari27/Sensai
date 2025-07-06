@@ -13,7 +13,7 @@
 
 ## Executive Summary
 
-SensAi is a comprehensive, full-stack career coaching platform designed to provide users with personalized, data-driven career guidance. The application leverages the Google Gemini API to offer a suite of intelligent tools, including a resume builder with AI-powered suggestions, a cover letter generator, and an adaptive interview preparation system. The platform is built with a modern tech stack, featuring Next.js for the front end, a serverless backend with a Neon DB PostgreSQL database, and Prisma ORM for efficient data management.
+SensAi – Full-Stack AI Career Assistant is a modern, AI-powered platform that provides users with personalized, data-driven career guidance, including resume building, cover letter creation, and interview preparation. The application leverages the Google Gemini API to offer a suite of intelligent tools, including a resume builder with AI-powered suggestions, a cover letter generator, and an adaptive interview preparation system. The platform is built with a modern tech stack, featuring Next.js for the front end, a serverless backend with a Neon DB PostgreSQL database, and Prisma ORM for efficient data management.
 
 ---
 
