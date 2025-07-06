@@ -1,4 +1,4 @@
-# SensAi: An AI-Powered Career Coaching Platform
+# SensAi: Full-Stack AI Career Assistant
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
