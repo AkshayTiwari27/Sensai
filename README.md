@@ -28,7 +28,7 @@ SensAi – Full-Stack AI Career Assistant is a modern, AI-powered platform that 
 | **AI Career Guidance**          | Uses **Google Gemini API** to provide personalized career recommendations based on user goals, skillset, and industry insights.                                |
 | **Resume Builder**              | Form-based and markdown editors for flexible resume creation. Resumes are stored in structured format and converted to **PDF**. Data is validated server-side. |
 | **Cover Letter Generator**      | Accepts job descriptions and uses **Gemini API** to generate tailored letters. Letters are saved with metadata for version control and user management.        |
-| **Interview Preparation**       | Dynamically generates mock interview questions using Gemini AI. Tracks performance metrics, visualized with **Recharts** (interactive analytics).              |
+| **Interview Preparation**       | Dynamically generates mock interview questions and quizzes using Gemini AI. Tracks performance metrics, visualized with **Recharts** (interactive analytics).              |
 | **Industry Insights Dashboard** | Weekly background jobs via **Inngest** fetch real-time salary data, skill demand, and trends. Ensures 100% data freshness across 15+ domains.                  |
 
 
